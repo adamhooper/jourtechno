@@ -1,0 +1,17 @@
+name: Jour(tech)no
+description: Use technology to find and share stories
+meta_description: "Jour(tech)no: use technology to find and share stories"
+
+markdown: redcarpet
+highlighter: pygments
+logo: false
+paginate: 10
+baseurl: /jourtechno
+domain_name: 'http://adamhooper.github.io'
+
+# Details for the RSS feed generator
+url:            'http://adamhooper.github.io/jourtechno'
+author:         'Adam Hooper'
+
+gems:
+  - jekyll-sitemap
