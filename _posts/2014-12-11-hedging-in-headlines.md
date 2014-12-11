@@ -76,7 +76,7 @@ When journalists hear "CSV", they should think "OpenRefine". It's a spreadsheet 
 
 Then browse to [http://127.0.0.1/3333](http://127.0.0.1/3333).
 
-[IMAGE]
+{% include image.html src="2014-12-11-hedging-in-headlines/openrefine.png" %}
 
 ### 2. Create a new project with Emergent data
 
@@ -90,7 +90,7 @@ Click "Create project"
 
 There's a lot going on here.
 
-[IMAGE]
+{% include image.html src="2014-12-11-hedging-in-headlines/openrefine-article-versions.png" %}
 
 First off, OpenRefine says you're dealing with 4,307 rows of data, but it only lists 10. That keeps OpenRefine fast. Click `50` to show 50 rows at a time instead.
 
@@ -111,7 +111,7 @@ Click on the little triangle next to the `headlineStance` column header. Choose 
 
 Now the facet shows up in the left-hand pane. Click on "observing".
 
-[IMAGE]
+{% include image.html src="2014-12-11-hedging-in-headlines/openrefine-headline-stance-facets.png" %}
 
 We've learned that 1,673 headlines are ranked as `observing`, out of the total of 4,307.
 
@@ -125,7 +125,7 @@ We don't want to even *think* about this complication for today's question. We w
 2. Click the down-arrow next to `url`, then "Edit Cells" and "Blank down".
 3. Click the down-arrow next to `url`, then "Facet", "Customized Facets" and "Facet by blank". Choose the `false` facet.
 
-[IMAGE]
+{% include image.html src="2014-12-11-hedging-in-headlines/openrefine-no-duplicate-urls.png" %}
 
 We've learned there are 655 unique articles, and we have their headlines.
 
@@ -141,6 +141,8 @@ Overview can import a CSV file, but it expects certain columns: "body", "title" 
 
 Success: you've just downloaded the headlines we want to analyze.
 
+{% include image.html src="2014-12-11-hedging-in-headlines/openrefine-text-and-title-columns.png" %}
+
 ### 7. Import into Overview
 
 Overview is made for text analysis. It can analyze headlines just fine. It's a website, so you don't need to install it.
@@ -150,25 +152,25 @@ Overview is made for text analysis. It can analyze headlines just fine. It's a w
 3. Choose the file you just downloaded from OpenRefine (it's just under 250kb)
 4. Click "Upload"
 
-[IMAGE]
+{% include image.html src="2014-12-11-hedging-in-headlines/overview-importing.png" %}
 
-[IMAGE]
+{% include image.html src="2014-12-11-hedging-in-headlines/overview-document-set-list.png" %}
 
 ### 8. Breathe
 
-Open your new document set in Overview.
+Click your new document set in Overview.
 
-[IMAGE]
+{% include image.html src="2014-12-11-hedging-in-headlines/overview-document-set.png" %}
 
 The default view is a "Tree" view. It organizes these headlines into topics.
 
-That's vaguely interesting, but it says more about Emergent's choice of claims than it does about the language in the headlines.
+That's interesting, but it says more about Emergent's choice of claims than it does about the language in the headlines.
 
 ### 9. Word cloud
 
 Click "Add view" and "Word cloud". You'll get what you'd expect:
 
-[IMAGE]
+{% include image.html src="2014-12-11-hedging-in-headlines/overview-word-cloud.png" %}
 
 Notice that there are plenty of words like "report", "reportedly", "says" and "reports".
 
@@ -180,7 +182,7 @@ Let's focus on hedging words.
 
 Click "Add view" and "Multisearch".
 
-[IMAGE]
+{% include image.html src="2014-12-11-hedging-in-headlines/overview-multi-search.png" %}
 
 You _could_ add one search at a time, but it's easier to add them all at once:
 
@@ -189,7 +191,7 @@ You _could_ add one search at a time, but it's easier to add them all at once:
 3. Click "Use these searches"
 4. Sort by document count
 
-[IMAGE]
+{% include image.html src="2014-12-11-hedging-in-headlines/overview-multi-search-hedging-words.png" %}
 
 So now we know the top five hedging words:
 
@@ -214,7 +216,7 @@ rumor,rumor* OR rumour*
 ```
 3. Click "Use these searches"
 
-[IMAGE]
+{% include image.html src="2014-12-11-hedging-in-headlines/overview-multi-search-stemmed-hedging-words.png" %}
 
 This is called "stemming". Instead of searching for words, we're searching for *stems* of words. (Some search indexes stem automatically. Overview doesn't.)
 
@@ -229,7 +231,7 @@ Let's analyze the other headlines to see what we've missed.
 3. Click "Save"
 4. Click the document count to populate the list on the right with headlines that don't use our hedging words
 
-[IMAGE]
+{% include image.html src="2014-12-11-hedging-in-headlines/overview-multi-search-no-hedging-words.png" %}
 
 From scanning the list, we can spot these patterns:
 
@@ -248,4 +250,4 @@ All that research, and what have we learned?
 * About 30 per cent of wishy-washy headlines include "report".
 * Headlines achieve ambiguity by including hedging words or special punctuation.
 
-As a reader, you should be wary when you spot these patterns. They indicate that the article you're reading is missing key facts.
+When you read news online, be wary when you spot these patterns. They indicate that the article you're reading is missing key facts.
