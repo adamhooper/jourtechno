@@ -74,7 +74,7 @@ When journalists hear "CSV", they should think "OpenRefine". It's a spreadsheet 
 * On Mac, open, drag the icon into the Applications folder and double-click it.
 * On Linux, extract and execute `refine`.
 
-Then browse to [http://127.0.0.1/3333](http://127.0.0.1/3333).
+Then browse to [http://127.0.0.1:3333](http://127.0.0.1:3333).
 
 {% include image.html src="2014-12-11-hedging-in-headlines/openrefine.png" %}
 
