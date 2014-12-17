@@ -133,9 +133,9 @@ We've learned there are 655 unique articles, and we have their headlines.
 
 OpenRefine is great at cleaning and slicing data, but it isn't great at text analysis. Let's export it for [Overview](https://www.overviewproject.org).
 
-Overview can import a CSV file, but it expects certain columns: "body", "title" and "url". We already have a "url" column, but we're missing the other two.
+Overview can import a CSV file, but it expects certain columns: "text", "title" and "url". We already have a "url" column, but we're missing the other two.
 
-1. Click the down-arrow next to `headline`, then "Edit Column" and "Add column based on this column...". Enter `body` as the new column name, and click OK.
+1. Click the down-arrow next to `headline`, then "Edit Column" and "Add column based on this column...". Enter `text` as the new column name, and click OK.
 2. Do the same to add a `title` column which also just contains the headline.
 3. Click "Export" and "Comma-separated value".
 
